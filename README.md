@@ -1,4 +1,7 @@
-waffle-chat
-===========
+# __waffle-chat__ #
 
-Authors: Catlin Buckley, Caleb Gutshall
+* * *
+
+A simple chat client written in node.js
+
+Written by : _Catlin Buckley_ and _Caleb Gutshall_
