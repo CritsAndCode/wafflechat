@@ -1,13 +1,22 @@
-var http = require('http');
-
-var server = http.createServer(function (request, response) {
-
-  response.writeHead(200, {"Content-Type": "text/plain"});
-
-  response.end("Hello World\n");
-
+var express = require("express");
+var app = express();
+var port = 80;
+ 
+app.set('views', __dirname + '/tpl');
+app.set('view engine', "jade");
+app.engine('jade', require('jade').__express);
+app.get("/", function(req, res){
+    res.render("page");
 });
 
-server.listen(80);
+app.use(express.static(__dirname + '/public'));
+ 
+var io = require('socket.io').listen(app.listen(port));
+console.log("Listening on port " + port);
 
-console.log("Server running at http://127.0.0.1:80/");
+io.sockets.on('connection', function (socket) {
+    socket.emit('message', { message: 'welcome to the chat' });
+    socket.on('send', function (data) {
+        io.sockets.emit('message', data);
+    });
+});
