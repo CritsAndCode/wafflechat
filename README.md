@@ -1,4 +1,4 @@
-# __WaffleChat__ #
+# __RocketChat__ #
 
 * * *
 
