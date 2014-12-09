@@ -1,0 +1,21 @@
+{
+  "name": "WaffleChat",
+  "version": "0.0.2",
+  "description": "Real-time chat",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "waffle",
+    "chat"
+  ],
+  "author": "Catlin Buckley",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.8.2",
+    "gravatar": "~1.0.6",
+    "socket.io": "^1.0.6"
+  }
+}
