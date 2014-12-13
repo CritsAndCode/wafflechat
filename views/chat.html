@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-	This file is rendered by express.js when the url /chat/123456 is visited in a browser.
--->
-
 <html>
 
 <head>
@@ -12,6 +8,7 @@
 
 	<link type="text/css" rel="stylesheet" href="../css/stylesheet.css" />
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans Condensed:300italic,300,700" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 </head>
@@ -23,8 +20,6 @@
 		<!-- These elements are displayed as white info cards in the middle of the screen -->
 
 		<div class="connected">
-
-			<img src="../img/unnamed.jpg" id="creatorImage" />
 
 			<div class="infoConnected">
 				<h2>Who are you?</h2>
@@ -42,8 +37,6 @@
 
 		<div class="personinside">
 
-			<img src="../img/unnamed.jpg" id="ownerImage" />
-
 			<div class="infoInside">
 				<h2>Chat with <span class="nickname-chat"></span></h2>
 				<br/>
@@ -60,25 +53,23 @@
 
 		<div class="invite-textfield">
 
-			<h2>Oops, there are no other people in this chat!</h2>
+			<h2>There are no other people in this chat.</h2>
 			<h5>Invite a friend by sending them this URL</h5>
 
 			<div class="link">
-				<a title="Invite a friend" href="" id="link"></a>
+				<span title="Invite a friend" href="" id="link"></span>
 			</div>
 
 		</div>
 
 		<div class="left">
 
-			<img src="../img/unnamed.jpg" id="leftImage" />
-
-			<div class="info">
 				<h2><span class="nickname-left"></span> has left the chat.</h2>
 				<h5>Invite somebody else by sending them this page.</h5>
+				<div class="link">
+					<span title="Invite a friend" href="" id="link"></span>
+				</div>
 			</div>
-
-		</div>
 
 		<div class="toomanypeople">
 
@@ -89,12 +80,8 @@
 
 		<div class="nomessages">
 
-			<img src="../img/unnamed.jpg" id="noMessagesImage" />
-
-			<div class="info">
 				<h2>You are chatting with <span class="nickname-chat"></span>.</h2>
 				<h5>Send them a message from the form below!</h5>
-			</div>
 
 		</div>
 
